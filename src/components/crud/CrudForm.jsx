@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
 import { BiFootball } from "react-icons/bi"
 import { useStateContext } from "../../context/GlobalState";
@@ -25,7 +25,7 @@ const CrudForm = () => {
 
             const validation = teams.find( t => t.country === formData.country);
             if(validation){
-                alert("Please add an non existing team")
+                alert("Please add an non existing team.")
             }else{
 
                 formData.id = Date.now()
@@ -34,7 +34,7 @@ const CrudForm = () => {
             }
 
         } else{
-            alert("Please complete all the inputs.");
+            alert("Please complete all the fields.");
         }
         
     }
@@ -97,6 +97,7 @@ const AddForm = styled(motion.form)`
       height: 38px;
       line-height: 38px;
       padding-left: 5px;
+      font-size: 1rem;
 
     }
 `;

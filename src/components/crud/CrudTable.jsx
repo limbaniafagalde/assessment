@@ -34,21 +34,22 @@ const CrudTable = () => {
         <>
             <Table>
                 <Head>
-                    <tr>
+                    {
+                    teams.length !== 0 && (
+                        <tr>
 
                         <th>National Team</th>
                         <th>Head Coach</th>
                         <th>Captain</th>                    
                      
                     </tr>
+                    )       
+                    }
                 </Head>
                 <Body
                 layout variants= {rows} animate= "show" initial = "hidden" 
                 >
-                {
-                    teams.length === 0 
-                    ? <td>No items</td>
-                    : teams.map((team, index) => {
+                {teams.map((team, index) => {
                     return <Tr key = {index}
                                 layout variants = {row}
                             >

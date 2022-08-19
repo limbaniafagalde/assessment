@@ -1,8 +1,8 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
 import { BiFootball } from "react-icons/bi";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useStateContext } from "../../context/GlobalState";
 
 //Adding framer-motion
@@ -11,7 +11,7 @@ const {motion} = require('framer-motion');
 
 const CrudEdit = () => {
 
-    const { editData, editTeam, formData, setFormData, resetForm, teams } =  useStateContext();
+    const { editData, editTeam, formData, setFormData, resetForm } =  useStateContext();
 
     let navigate = useNavigate();
 
@@ -31,14 +31,10 @@ const CrudEdit = () => {
         if (formData.country !== "" && formData.headCoach !== ""  && formData.captain !== "" ) {
             
             if(editData !== null){
-                const validation = teams.find( t => t.country === formData.country);
-                if(validation){
-                    alert("Please add an non existing team")
-                }else{
-                    editTeam(formData);
-                    resetForm();
-                    navigate("/");
-                }
+                editTeam(formData);
+                resetForm();
+                navigate("/");
+                
             }
         } else{
             alert("Please complete all the inputs.");
