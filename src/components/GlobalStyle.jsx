@@ -12,7 +12,6 @@ body{
     font-family: "Montserrat", "Lato", "Inter", sans-serif;
     //background: #757575;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(117,117,117,1) 35%, rgba(4,143,171,1) 100%);
-
 }
 
 button{
@@ -30,6 +29,10 @@ button{
         background-color: black;
         color: white;
     }
+    @media screen and (max-width: 800px) {
+    width: 75%;
+    margin : 2% auto;
+    }
     
 }
 
@@ -43,6 +46,11 @@ h2{
     width: 30%;
     margin: 2rem auto;
 
+    @media screen and (max-width: 800px) {
+    width: 75%;
+    margin : 2% auto;
+    }
+
 }
 
 form{
@@ -53,6 +61,19 @@ form{
     margin: 3% 40%;
     background: #a1ac88 ;
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    font-family: "Montserrat", "Lato", "Inter", sans-serif;
+
+    @media screen and (max-width: 800px) {
+    width: 60%;
+    margin : 2% auto;
+    }
+}
+
+table{
+    @media screen and (max-width: 800px) {
+    width: 75%;
+    margin : 2% auto;
+    }
 }
 
 `;

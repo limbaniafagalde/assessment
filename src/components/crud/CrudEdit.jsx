@@ -111,6 +111,7 @@ const EditForm = styled(motion.form)`
       height: 38px;
       line-height: 38px;
       padding-left: 5px;
+      font-size: 1rem;
     
     }
 `;

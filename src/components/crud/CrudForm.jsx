@@ -98,7 +98,6 @@ const AddForm = styled(motion.form)`
       line-height: 38px;
       padding-left: 5px;
       font-size: 1rem;
-
     }
 `;
 
